@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./lib/server.ts",
+    "dev": "ts-node ./src/server.ts",
     "start": "node ./dist/server.js",
     "prod": "npm run build && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,11 @@
     "mysql": "^2.15.0",
     "reflect-metadata": "^0.1.12",
     "typeorm": "^0.1.20"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-typescript": "^4.0.2",
+    "typescript": "^2.8.1"
   }
 }

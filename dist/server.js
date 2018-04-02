@@ -35,4 +35,3 @@ function ormcon() {
     //   console.log("Result: " + result)
     // })
 }
-//# sourceMappingURL=server.js.map

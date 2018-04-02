@@ -1,4 +1,4 @@
-import app from "./app";
+import app from "./app"
 import db from "./db/db"
 import * as dbconfig from "./db/db_config"
 import { createConnection, getManager, Connection, ConnectionManager } from "typeorm";
