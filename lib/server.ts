@@ -16,13 +16,15 @@ app.listen(port, function () {
 function ormcon() {
   createConnection(dbconfig.dbOptions).then(async connection => {
     console.log("Connected to Database")
-    connection.getRepository(User).save( new User("prueba", "prueba"))
+    // connection.getRepository(User).save( new User("prueba", "prueba"))
+    connection.getRepository(User).find().then((result: any) => {
+      result.forEach(user => {
+        console.log("User with email: " + user.email)
+      });
+    })
   }).catch(error => console.log("TypeORM connection error: ", error))
   // let userRepo : UserRepository = new UserRepository()
   // userRepo.getAllUsers().then((result: any) => {
   //   console.log("Result: " + result)
   // })
-  getManager().getRepository(User).find().then((result: any) => {
-    console.log("Result: " + result)
-  })
 }

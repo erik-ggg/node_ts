@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, Index } from "typeorm";
 
-@Index(["email", "password"])
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
@@ -10,6 +9,7 @@ export class User {
     @Column({length: 100})
     email: string
 
+    @Index()
     @Column({length: 100})
     password: string
 

@@ -26,11 +26,11 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
+    typeorm_1.Index(),
     typeorm_1.Column({ length: 100 }),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 User = __decorate([
-    typeorm_1.Index(["email", "password"]),
     typeorm_1.Entity(),
     __metadata("design:paramtypes", [String, String])
 ], User);
