@@ -8,4 +8,3 @@ class UserRepository {
     }
 }
 exports.UserRepository = UserRepository;
-//# sourceMappingURL=UserRepository.js.map

@@ -14,4 +14,3 @@ exports.dbOptions = {
     ],
     synchronize: true
 };
-//# sourceMappingURL=db_config.js.map

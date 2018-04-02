@@ -23,4 +23,3 @@ class Database {
     }
 }
 exports.default = new Database;
-//# sourceMappingURL=db.js.map
