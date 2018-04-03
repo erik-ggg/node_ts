@@ -23,12 +23,14 @@ app_1.default.listen(port, function () {
 function ormcon() {
     typeorm_1.createConnection(dbconfig.dbOptions).then((connection) => __awaiter(this, void 0, void 0, function* () {
         console.log("Connected to Database");
-        // connection.getRepository(User).save( new User("prueba", "prueba"))
-        connection.getRepository(User_1.User).find().then((result) => {
-            result.forEach(user => {
-                console.log("User with email: " + user.email);
-            });
-        });
+        let user = new User_1.User("pruebahash", "prueba");
+        console.log("password: " + user.getPassword());
+        connection.getRepository(User_1.User).save(user);
+        // connection.getRepository(User).find().then((result: any) => {
+        //   result.forEach(user => {
+        //     console.log("User with email: " + user.email)
+        //   });
+        // })
     })).catch(error => console.log("TypeORM connection error: ", error));
     // let userRepo : UserRepository = new UserRepository()
     // userRepo.getAllUsers().then((result: any) => {
